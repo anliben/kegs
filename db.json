@@ -1,0 +1,15 @@
+{
+  "headers": [
+    {
+      "id": 1,
+      "property": "name",
+      "label": "Name"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "João Victor"
+    }
+  ]
+}
