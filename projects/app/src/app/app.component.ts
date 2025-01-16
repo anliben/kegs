@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { KegComponent } from '../../../keg/src/public-api';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,13 +14,12 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './app.component.css'
 })
 export class AppComponent extends KegComponent<any> implements OnInit, AfterViewInit {
+  title = 'app';
+
   ngAfterViewInit(): void {
     this.base_api = 'http://localhost:3000'
     this.getApi().subscribe((res) => {
       console.log(res)
     })
   }
-  title = 'app';
-
-
 }
